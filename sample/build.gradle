@@ -1,0 +1,22 @@
+apply plugin: 'com.android.application'
+
+android {
+    buildToolsVersion '28.0.3'
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 21
+        applicationId "com.davemorrissey.labs.subscaleview.test"
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+        }
+    }
+
+}
+
+dependencies {
+    implementation project(':library')
+    implementation 'com.android.support:support-v4:27.1.1'
+}
